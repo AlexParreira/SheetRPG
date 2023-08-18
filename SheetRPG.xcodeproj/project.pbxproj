@@ -11,27 +11,11 @@
 		EB5926CE2A8DAD7900B95EC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */; };
 		EB5926D02A8DAD7A00B95EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */; };
 		EB5926D32A8DAD7A00B95EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5926D22A8DAD7A00B95EC4 /* Preview Assets.xcassets */; };
-		EB5926DD2A8DAD7A00B95EC4 /* SheetRPGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926DC2A8DAD7A00B95EC4 /* SheetRPGTests.swift */; };
-		EB5926E72A8DAD7A00B95EC4 /* SheetRPGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926E62A8DAD7A00B95EC4 /* SheetRPGUITests.swift */; };
-		EB5926E92A8DAD7A00B95EC4 /* SheetRPGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926E82A8DAD7A00B95EC4 /* SheetRPGUITestsLaunchTests.swift */; };
+		EB5926F62A8DADCC00B95EC4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */; };
+		EB5926F82A8DADE600B95EC4 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F72A8DADE600B95EC4 /* Sheet.swift */; };
+		EB5926FA2A8DB36E00B95EC4 /* CadastroPersonagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */; };
+		EBB799C02A8E7BD400D77163 /* Tormenta20x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB799BF2A8E7BD400D77163 /* Tormenta20x.ttf */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EB5926D92A8DAD7A00B95EC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB5926C02A8DAD7900B95EC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EB5926C72A8DAD7900B95EC4;
-			remoteInfo = SheetRPG;
-		};
-		EB5926E32A8DAD7A00B95EC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB5926C02A8DAD7900B95EC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EB5926C72A8DAD7900B95EC4;
-			remoteInfo = SheetRPG;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EB5926C82A8DAD7900B95EC4 /* SheetRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheetRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,29 +23,15 @@
 		EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB5926D22A8DAD7A00B95EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EB5926D82A8DAD7A00B95EC4 /* SheetRPGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheetRPGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5926DC2A8DAD7A00B95EC4 /* SheetRPGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRPGTests.swift; sourceTree = "<group>"; };
-		EB5926E22A8DAD7A00B95EC4 /* SheetRPGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheetRPGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5926E62A8DAD7A00B95EC4 /* SheetRPGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRPGUITests.swift; sourceTree = "<group>"; };
-		EB5926E82A8DAD7A00B95EC4 /* SheetRPGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetRPGUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
+		EB5926F72A8DADE600B95EC4 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPersonagemView.swift; sourceTree = "<group>"; };
+		EBB799BF2A8E7BD400D77163 /* Tormenta20x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tormenta20x.ttf; path = ../../../../Downloads/Tormenta20x.ttf; sourceTree = "<group>"; };
+		EBB799C12A8E7C0600D77163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EB5926C52A8DAD7900B95EC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926D52A8DAD7A00B95EC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926DF2A8DAD7A00B95EC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,9 +44,8 @@
 		EB5926BF2A8DAD7900B95EC4 = {
 			isa = PBXGroup;
 			children = (
+				EBB799BE2A8E7BB600D77163 /* Resources */,
 				EB5926CA2A8DAD7900B95EC4 /* SheetRPG */,
-				EB5926DB2A8DAD7A00B95EC4 /* SheetRPGTests */,
-				EB5926E52A8DAD7A00B95EC4 /* SheetRPGUITests */,
 				EB5926C92A8DAD7900B95EC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				EB5926C82A8DAD7900B95EC4 /* SheetRPG.app */,
-				EB5926D82A8DAD7A00B95EC4 /* SheetRPGTests.xctest */,
-				EB5926E22A8DAD7A00B95EC4 /* SheetRPGUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +61,11 @@
 		EB5926CA2A8DAD7900B95EC4 /* SheetRPG */ = {
 			isa = PBXGroup;
 			children = (
+				EBB799C42A8EBC8C00D77163 /* View */,
+				EBB799C32A8EBC7C00D77163 /* Model */,
+				EBB799C22A8EBC6A00D77163 /* ViewModel */,
+				EBB799C12A8E7C0600D77163 /* Info.plist */,
 				EB5926CB2A8DAD7900B95EC4 /* SheetRPGApp.swift */,
-				EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */,
 				EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */,
 				EB5926D12A8DAD7A00B95EC4 /* Preview Content */,
 			);
@@ -110,21 +80,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EB5926DB2A8DAD7A00B95EC4 /* SheetRPGTests */ = {
+		EBB799BE2A8E7BB600D77163 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EB5926DC2A8DAD7A00B95EC4 /* SheetRPGTests.swift */,
+				EBB799BF2A8E7BD400D77163 /* Tormenta20x.ttf */,
 			);
-			path = SheetRPGTests;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		EB5926E52A8DAD7A00B95EC4 /* SheetRPGUITests */ = {
+		EBB799C22A8EBC6A00D77163 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EB5926E62A8DAD7A00B95EC4 /* SheetRPGUITests.swift */,
-				EB5926E82A8DAD7A00B95EC4 /* SheetRPGUITestsLaunchTests.swift */,
+				EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */,
 			);
-			path = SheetRPGUITests;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBB799C32A8EBC7C00D77163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB5926F72A8DADE600B95EC4 /* Sheet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBB799C42A8EBC8C00D77163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */,
+				EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +133,6 @@
 			productReference = EB5926C82A8DAD7900B95EC4 /* SheetRPG.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EB5926D72A8DAD7A00B95EC4 /* SheetRPGTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB5926EF2A8DAD7A00B95EC4 /* Build configuration list for PBXNativeTarget "SheetRPGTests" */;
-			buildPhases = (
-				EB5926D42A8DAD7A00B95EC4 /* Sources */,
-				EB5926D52A8DAD7A00B95EC4 /* Frameworks */,
-				EB5926D62A8DAD7A00B95EC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB5926DA2A8DAD7A00B95EC4 /* PBXTargetDependency */,
-			);
-			name = SheetRPGTests;
-			productName = SheetRPGTests;
-			productReference = EB5926D82A8DAD7A00B95EC4 /* SheetRPGTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EB5926E12A8DAD7A00B95EC4 /* SheetRPGUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB5926F22A8DAD7A00B95EC4 /* Build configuration list for PBXNativeTarget "SheetRPGUITests" */;
-			buildPhases = (
-				EB5926DE2A8DAD7A00B95EC4 /* Sources */,
-				EB5926DF2A8DAD7A00B95EC4 /* Frameworks */,
-				EB5926E02A8DAD7A00B95EC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB5926E42A8DAD7A00B95EC4 /* PBXTargetDependency */,
-			);
-			name = SheetRPGUITests;
-			productName = SheetRPGUITests;
-			productReference = EB5926E22A8DAD7A00B95EC4 /* SheetRPGUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +145,6 @@
 				TargetAttributes = {
 					EB5926C72A8DAD7900B95EC4 = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					EB5926D72A8DAD7A00B95EC4 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = EB5926C72A8DAD7900B95EC4;
-					};
-					EB5926E12A8DAD7A00B95EC4 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = EB5926C72A8DAD7900B95EC4;
 					};
 				};
 			};
@@ -220,8 +162,6 @@
 			projectRoot = "";
 			targets = (
 				EB5926C72A8DAD7900B95EC4 /* SheetRPG */,
-				EB5926D72A8DAD7A00B95EC4 /* SheetRPGTests */,
-				EB5926E12A8DAD7A00B95EC4 /* SheetRPGUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,22 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB799C02A8E7BD400D77163 /* Tormenta20x.ttf in Resources */,
 				EB5926D32A8DAD7A00B95EC4 /* Preview Assets.xcassets in Resources */,
 				EB5926D02A8DAD7A00B95EC4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926D62A8DAD7A00B95EC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926E02A8DAD7A00B95EC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,42 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5926F62A8DADCC00B95EC4 /* SheetViewModel.swift in Sources */,
 				EB5926CE2A8DAD7900B95EC4 /* ContentView.swift in Sources */,
+				EB5926FA2A8DB36E00B95EC4 /* CadastroPersonagemView.swift in Sources */,
 				EB5926CC2A8DAD7900B95EC4 /* SheetRPGApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926D42A8DAD7A00B95EC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB5926DD2A8DAD7A00B95EC4 /* SheetRPGTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB5926DE2A8DAD7A00B95EC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB5926E92A8DAD7A00B95EC4 /* SheetRPGUITestsLaunchTests.swift in Sources */,
-				EB5926E72A8DAD7A00B95EC4 /* SheetRPGUITests.swift in Sources */,
+				EB5926F82A8DADE600B95EC4 /* Sheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EB5926DA2A8DAD7A00B95EC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB5926C72A8DAD7900B95EC4 /* SheetRPG */;
-			targetProxy = EB5926D92A8DAD7A00B95EC4 /* PBXContainerItemProxy */;
-		};
-		EB5926E42A8DAD7A00B95EC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB5926C72A8DAD7900B95EC4 /* SheetRPG */;
-			targetProxy = EB5926E32A8DAD7A00B95EC4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EB5926EA2A8DAD7A00B95EC4 /* Debug */ = {
@@ -419,6 +319,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SheetRPG/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SheetRPG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +348,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SheetRPG/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SheetRPG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,78 +364,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		EB5926F02A8DAD7A00B95EC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexParreira.SheetRPGTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SheetRPG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SheetRPG";
-			};
-			name = Debug;
-		};
-		EB5926F12A8DAD7A00B95EC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexParreira.SheetRPGTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SheetRPG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SheetRPG";
-			};
-			name = Release;
-		};
-		EB5926F32A8DAD7A00B95EC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexParreira.SheetRPGUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SheetRPG;
-			};
-			name = Debug;
-		};
-		EB5926F42A8DAD7A00B95EC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = alexParreira.SheetRPGUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SheetRPG;
 			};
 			name = Release;
 		};
@@ -554,24 +384,6 @@
 			buildConfigurations = (
 				EB5926ED2A8DAD7A00B95EC4 /* Debug */,
 				EB5926EE2A8DAD7A00B95EC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB5926EF2A8DAD7A00B95EC4 /* Build configuration list for PBXNativeTarget "SheetRPGTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB5926F02A8DAD7A00B95EC4 /* Debug */,
-				EB5926F12A8DAD7A00B95EC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB5926F22A8DAD7A00B95EC4 /* Build configuration list for PBXNativeTarget "SheetRPGUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB5926F32A8DAD7A00B95EC4 /* Debug */,
-				EB5926F42A8DAD7A00B95EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
