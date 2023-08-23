@@ -8,31 +8,63 @@
 import SwiftUI
 
 struct CadastroPersonagemView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel: SheetViewModel
+    
+    @ObservedObject var sheetViewModel: SheetViewModel
+
+    @Environment(\.dismiss) var dismiss
+    
+    init(sheet: Sheet) {
+        self.sheetViewModel = SheetViewModel(sheet: sheet)
+        
+    }
+
     @State private var nomePersonagem = ""
     @State private var classePersonagem = ""
     @State private var racaPersonagem = ""
-    @State private var str = ""
+    @State private var levelPersonagem = 0
+    
+    @State private var forcaPersonagem: Int = 0
+    @State private var destrezaPersonagem: Int  = 0
+    @State private var constituicaoPersonagem: Int  = 0
+    @State private var inteligenciaPersonagem: Int  = 0
+    @State private var sabedoriaPersonagem: Int  = 0
+    @State private var carismaPersonagem: Int  = 0
+    @State private var hpPersonagem: Int  = 0
+    @State private var mpPersonagem: Int  = 0
+    
+    
+    
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack{
                     Text("")
-                        .navigationTitle("Novo Personagem")
+                        .navigationTitle("")
                         .toolbar {
                             ToolbarItem(placement: .principal) {
                                 Text("Novo Personagem")
-                                    .font(.custom("Tormenta20-Regular", size: 25))
-                                    .foregroundColor(.black)
+                                    .font(.custom("Tormenta20-Regular", size: 35))
+                                    .foregroundColor(.gray)
+                                    .padding(.top, 25)
                             }
                         }
+                    
                     VStack{
+
+                        TextFildMod(text:"Nome", obj:  $nomePersonagem)
+                            .padding(.horizontal)
+                            .foregroundColor(Color.red)
+
                         HStack{
-                            TextFildMod(text:"Nome", obj:  $nomePersonagem)
-                            TextFildMod(text:"Classe", obj: $classePersonagem)
+                            
                             TextFildMod(text:"Raça", obj: $racaPersonagem)
+                            TextFildMod(text:"Classe", obj: $classePersonagem)
+                            TextField("", value: $levelPersonagem, formatter: NumberFormatter())
+                                .textFieldStyle(CustomTextFieldStyle())
+                                
+                                
+                                
                         }
                         .padding()
                         Divider()
@@ -41,12 +73,12 @@ struct CadastroPersonagemView: View {
                 }
                 .padding(.horizontal)
                 
-                Attribut(text: "For", obj: $str, distance: 10)
-                Attribut(text: "Dex", obj: $str, distance: 10)
-                Attribut(text: "Con", obj: $str, distance: 7)
-                Attribut(text: "Int ", obj: $str, distance: 6)
-                Attribut(text: "Sab ", obj: $str, distance: 1)
-                Attribut(text: "Car", obj: $str, distance: 10)
+                Attribut(text: "For", obj: $forcaPersonagem, distance: 10)
+                Attribut(text: "Des", obj: $destrezaPersonagem, distance: 10)
+                Attribut(text: "Con", obj: $constituicaoPersonagem, distance: 5)
+                Attribut(text: "Int", obj: $inteligenciaPersonagem, distance: 16)
+                Attribut(text: "Sab", obj: $sabedoriaPersonagem, distance: 10)
+                Attribut(text: "Car", obj: $carismaPersonagem, distance: 8)
                 
                 VStack{
                     Divider()
@@ -54,75 +86,69 @@ struct CadastroPersonagemView: View {
                         .padding(.horizontal)
                     HStack{
                         
-                        Attribut(text: "HP", obj: $str, distance: 24)
-                        Attribut(text: "PM", obj: $str, distance: 5)
+                        Attribut(text: "HP", obj: $hpPersonagem, distance: 1)
+                        Attribut(text: "PM", obj: $mpPersonagem, distance: 1)
                     }
                     Divider()
                         .background(Color.black)
                         .padding(.horizontal)
-                    HStack{
-                        Text("Pericias")
-                            .font(Font.custom("Tormenta20-Regular", size: 25))
-                            .padding(.leading)
+
                         Spacer()
-                    }
+                    
                 }
                 
                 
                 Spacer()
                 Button("Salvar") {
-                    viewModel.addSheet(name: nomePersonagem,race: racaPersonagem, classC: classePersonagem )
-                    presentationMode.wrappedValue.dismiss()
+                    sheetViewModel.AddSheet(nome: nomePersonagem, classe: classePersonagem, raca: racaPersonagem, nivel: levelPersonagem, forca: forcaPersonagem, destreza: destrezaPersonagem, constituicao: constituicaoPersonagem, inteligencia: inteligenciaPersonagem, sabedoria: sabedoriaPersonagem, carisma: carismaPersonagem, hp: hpPersonagem, mp: mpPersonagem)
+                    
+                    dismiss()
                 }
                 .padding()
-                .navigationBarTitle("Novo Personagem", displayMode: .inline)
-                .navigationBarTitleModifier(font: .custom("Tormenta20-Regular", size: 15), color: .red)
-                .font(Font.custom("Tormenta20-Regular", size: 15))
-                
             }
-            .padding()
         }
     }
 }
 
-struct TextFildMod: View{
-    var text: String
-    var  obj: Binding<String>
-    
-    var body: some View{
-        TextField(text, text: obj)
-            .textFieldStyle(CustomTextFieldStyle())
-            .font(Font.custom("Tormenta20-Regular", size: 15))
-    }
-}
+
 
 struct Attribut : View{
     var text: String
-    var  obj: Binding<String>
+    var  obj: Binding<Int>
     var distance: CGFloat
-
+    
     var body: some View {
     
         HStack{
             
-            Text(text)
+            Text("\(text):")
                 .font(Font.custom("Tormenta20-Regular", size: 24))
-                .padding(.trailing)
+                .padding(.leading)
+                .foregroundColor(Color.gray)
+                
             
-            TextField("",text: obj)
+            
+            TextField("", value: obj, formatter: NumberFormatter())
                 .font(Font.custom("Tormenta20-Regular", size: 24))
                 .textFieldStyle(CustomTextFieldStyle())
                 .frame(width: 60)
                 .padding(.leading, distance)
 
             Spacer()
-            Text("")
-                .font(Font.custom("Tormenta20-Regular", size: 24))
-                
             
         }
         .padding(.horizontal)
         
+    }
+}
+struct TextFildMod: View{
+    var text: String
+    var  obj: Binding<String>
+    
+    var body: some View{
+        
+        TextField(text, text: obj)
+            .textFieldStyle(CustomTextFieldStyle())
     }
 }
 
@@ -131,48 +157,20 @@ struct CustomTextFieldStyle: TextFieldStyle {
         configuration
             .padding(5)
             .background(Color.white)
+            .cornerRadius(10)
+            .shadow(radius: 5)
             .font(Font.custom("Tormenta20-Regular", size: 20))
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.black, lineWidth: 1)
-            )
-            .font(.body)
+            .foregroundColor(Color.gray.opacity(0.4))
     }
 }
 
-extension View{
-    func navigationBarTitleModifier(font: Font, color: Color) -> some View{
-        self.modifier(NavigationBarTitleModifier(font: font, color: color))
-    }
-}
-
-struct NavigationBarTitleModifier: ViewModifier{
-    var font: Font
-    var color: Color
-    
-    func body(content: Content) -> some View {
-        content
-            .navigationBarTitleDisplayMode(.inline)
-            .font(font)
-            .foregroundColor(color)
-    }
-}
-
-struct SideMenu: View {
-    var body: some View {
-        List {
-            NavigationLink("Página Inicial", destination: Text("Página Inicial"))
-            NavigationLink("Configurações", destination: Text("Configurações"))
-            NavigationLink("Sobre", destination: Text("Sobre"))
-        }
-        .listStyle(SidebarListStyle())
-        .frame(minWidth: 200, idealWidth: 250, maxWidth: 300)
-    }
-}
 
 struct CadastroPersonagemView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        CadastroPersonagemView(viewModel: SheetViewModel())
+
+        CadastroPersonagemView(sheet: Sheet())
+            
     }
 }
 

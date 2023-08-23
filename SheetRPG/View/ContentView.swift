@@ -8,31 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = SheetViewModel()
+    @ObservedObject var viewModel = SheetViewModel(sheet: Sheet())
+    
+    @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                List(viewModel.sheets) { ficha in
-                    Text("Ficha \(ficha.nome)")
-                }
-                .navigationTitle("Fichas de Personagem")
-                
-                NavigationLink(destination: CadastroPersonagemView(viewModel: viewModel)) {
-
-                        VStack {
-                            Image("scroll")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 55, height: 55)
- 
+            Text("")
+                .padding()
+            
+                .navigationTitle("Fichas")
+                .sheet(isPresented: $isPresented, content:{
+                })
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button{
+                            isPresented = true
+                        }label: {
+                            Image(systemName: "scroll")
+                                .foregroundColor(Color.black)
+                                .frame(width: 30, height: 30)
+                            
                         }
                     }
-                    .padding()
                 }
-            }
+            
+            
         }
+        
     }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

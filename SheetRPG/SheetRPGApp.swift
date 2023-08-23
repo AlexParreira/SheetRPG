@@ -10,18 +10,14 @@ import SwiftUI
 @main
 struct SheetRPGApp: App {
     
-    init(){
-        for family in UIFont.familyNames{
-            print("\(family)")
-            for font in UIFont.fontNames(forFamilyName: family){
-                print("  \(font)")
-            }
-        }
-    }
     
     var body: some Scene {
         WindowGroup {
+            let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+            let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
             ContentView()
+               
         }
+        
     }
 }
