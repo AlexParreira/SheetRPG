@@ -6,18 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct CadastroPersonagemView: View {
     
-    @ObservedObject var sheetViewModel: SheetViewModel
-
-    @Environment(\.dismiss) var dismiss
     
-    init(sheet: Sheet) {
-        self.sheetViewModel = SheetViewModel(sheet: sheet)
-        
-    }
-
     @State private var nomePersonagem = ""
     @State private var classePersonagem = ""
     @State private var racaPersonagem = ""
@@ -32,13 +25,11 @@ struct CadastroPersonagemView: View {
     @State private var hpPersonagem: Int  = 0
     @State private var mpPersonagem: Int  = 0
     
-    
-    
-    
     var body: some View {
         NavigationView {
             VStack {
                 HStack{
+                    //MARK: TITLE
                     Text("")
                         .navigationTitle("")
                         .toolbar {
@@ -49,22 +40,17 @@ struct CadastroPersonagemView: View {
                                     .padding(.top, 25)
                             }
                         }
-                    
                     VStack{
-
-                        TextFildMod(text:"Nome", obj:  $nomePersonagem)
+                    //MARK: INFO PERSONAGEM
+                        TextFildMod(text:"Nome", obj: $nomePersonagem)
                             .padding(.horizontal)
                             .foregroundColor(Color.red)
 
                         HStack{
-                            
                             TextFildMod(text:"Raça", obj: $racaPersonagem)
                             TextFildMod(text:"Classe", obj: $classePersonagem)
                             TextField("", value: $levelPersonagem, formatter: NumberFormatter())
                                 .textFieldStyle(CustomTextFieldStyle())
-                                
-                                
-                                
                         }
                         .padding()
                         Divider()
@@ -72,39 +58,68 @@ struct CadastroPersonagemView: View {
                     }
                 }
                 .padding(.horizontal)
-                
-                Attribut(text: "For", obj: $forcaPersonagem, distance: 10)
-                Attribut(text: "Des", obj: $destrezaPersonagem, distance: 10)
-                Attribut(text: "Con", obj: $constituicaoPersonagem, distance: 5)
-                Attribut(text: "Int", obj: $inteligenciaPersonagem, distance: 16)
-                Attribut(text: "Sab", obj: $sabedoriaPersonagem, distance: 10)
-                Attribut(text: "Car", obj: $carismaPersonagem, distance: 8)
-                
-                VStack{
-                    Divider()
-                        .background(Color.black)
-                        .padding(.horizontal)
-                    HStack{
-                        
-                        Attribut(text: "HP", obj: $hpPersonagem, distance: 1)
-                        Attribut(text: "PM", obj: $mpPersonagem, distance: 1)
-                    }
-                    Divider()
-                        .background(Color.black)
-                        .padding(.horizontal)
+                .padding(.bottom)
 
-                        Spacer()
+                HStack{
+                        VStack{
+                            //MARK: ATRIBUTOS PERSONAGEM
+                        Attribut(text: "For", obj: $forcaPersonagem, distance: 2)
+                        Attribut(text: "Des", obj: $destrezaPersonagem, distance: 3)
+                        Attribut(text: "Con", obj: $constituicaoPersonagem, distance: 0)
+                        Attribut(text: "Int", obj: $inteligenciaPersonagem, distance: 11)
+                            Attribut(text: "Sab", obj: $sabedoriaPersonagem, distance: 7)
+                        Attribut(text: "Car", obj: $carismaPersonagem, distance: 4.5)
+                        }
+                    Divider()
+                        .background(Color.black)
+ 
+
+                    VStack{
+                        
+                        VStack{
+                            
+                            Text("HP:")
+                                .font(Font.custom("Tormenta20-Regular", size: 24))
+                                .foregroundColor(Color.gray)
+                            
+                            TextField("", value: $hpPersonagem, formatter: NumberFormatter())
+                                .font(Font.custom("Tormenta20-Regular", size: 40))
+                                .padding(20)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .foregroundColor(Color.gray.opacity(0.4))
+                                .frame(maxWidth: 80 , maxHeight: 75)
+                            Spacer()
+                        }
+                        
+                        VStack{
+                            
+                            Text("MP:")
+                                .font(Font.custom("Tormenta20-Regular", size: 24))
+                                .foregroundColor(Color.gray)
+                            
+                            TextField("", value: $mpPersonagem, formatter: NumberFormatter())
+                                .font(Font.custom("Tormenta20-Regular", size: 40))
+                                .padding(20)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .foregroundColor(Color.gray.opacity(0.4))
+                                .frame(maxWidth: 80 , maxHeight: 75)
+                            Spacer()
+                        }
+                    }
+                    .padding(.horizontal,45)
                     
                 }
+                .frame(maxWidth: 380, maxHeight: 300)
+                .padding(.vertical)
+                .padding(.horizontal)
                 
-                
-                Spacer()
                 Button("Salvar") {
-                    sheetViewModel.AddSheet(nome: nomePersonagem, classe: classePersonagem, raca: racaPersonagem, nivel: levelPersonagem, forca: forcaPersonagem, destreza: destrezaPersonagem, constituicao: constituicaoPersonagem, inteligencia: inteligenciaPersonagem, sabedoria: sabedoriaPersonagem, carisma: carismaPersonagem, hp: hpPersonagem, mp: mpPersonagem)
-                    
-                    dismiss()
                 }
-                .padding()
+                
             }
         }
     }
@@ -125,9 +140,7 @@ struct Attribut : View{
                 .font(Font.custom("Tormenta20-Regular", size: 24))
                 .padding(.leading)
                 .foregroundColor(Color.gray)
-                
-            
-            
+
             TextField("", value: obj, formatter: NumberFormatter())
                 .font(Font.custom("Tormenta20-Regular", size: 24))
                 .textFieldStyle(CustomTextFieldStyle())
@@ -147,7 +160,12 @@ struct TextFildMod: View{
     
     var body: some View{
         
-        TextField(text, text: obj)
+        TextField(text, text: Binding(
+            get: { self.obj.wrappedValue },
+            set: { newValue in
+                self.obj.wrappedValue = newValue.lowercased()
+            }
+        ))
             .textFieldStyle(CustomTextFieldStyle())
     }
 }
@@ -168,8 +186,8 @@ struct CustomTextFieldStyle: TextFieldStyle {
 struct CadastroPersonagemView_Previews: PreviewProvider {
     
     static var previews: some View {
-
-        CadastroPersonagemView(sheet: Sheet())
+        
+        CadastroPersonagemView()
             
     }
 }

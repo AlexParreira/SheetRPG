@@ -11,10 +11,9 @@
 		EB5926CE2A8DAD7900B95EC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */; };
 		EB5926D02A8DAD7A00B95EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */; };
 		EB5926D32A8DAD7A00B95EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5926D22A8DAD7A00B95EC4 /* Preview Assets.xcassets */; };
-		EB5926F62A8DADCC00B95EC4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */; };
-		EB5926F82A8DADE600B95EC4 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F72A8DADE600B95EC4 /* Sheet.swift */; };
-		EB5926FA2A8DB36E00B95EC4 /* CadastroPersonagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */; };
 		EBB799C02A8E7BD400D77163 /* Tormenta20x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB799BF2A8E7BD400D77163 /* Tormenta20x.ttf */; };
+		EBBA7DA82AA51557002DFBB6 /* CadastroPersonagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA7DA72AA51557002DFBB6 /* CadastroPersonagemView.swift */; };
+		EBEC2AA82ABCF2580089BD07 /* SheetsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEC2AA72ABCF2580089BD07 /* SheetsDatabase.swift */; };
 		EBFC0FFC2A92D6730085AA9E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EBFC0FFB2A92D6730085AA9E /* Realm */; };
 		EBFC0FFE2A92D6730085AA9E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EBFC0FFD2A92D6730085AA9E /* RealmSwift */; };
 /* End PBXBuildFile section */
@@ -25,11 +24,10 @@
 		EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB5926D22A8DAD7A00B95EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
-		EB5926F72A8DADE600B95EC4 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
-		EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPersonagemView.swift; sourceTree = "<group>"; };
 		EBB799BF2A8E7BD400D77163 /* Tormenta20x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tormenta20x.ttf; path = ../../../../Downloads/Tormenta20x.ttf; sourceTree = "<group>"; };
-		EBB799C12A8E7C0600D77163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBB799C12A8E7C0600D77163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBBA7DA72AA51557002DFBB6 /* CadastroPersonagemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroPersonagemView.swift; sourceTree = "<group>"; };
+		EBEC2AA72ABCF2580089BD07 /* SheetsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +48,7 @@
 			children = (
 				EBB799BE2A8E7BB600D77163 /* Resources */,
 				EB5926CA2A8DAD7900B95EC4 /* SheetRPG */,
+				EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */,
 				EB5926C92A8DAD7900B95EC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,12 +64,10 @@
 		EB5926CA2A8DAD7900B95EC4 /* SheetRPG */ = {
 			isa = PBXGroup;
 			children = (
-				EBB799C42A8EBC8C00D77163 /* View */,
-				EBB799C32A8EBC7C00D77163 /* Model */,
-				EBB799C22A8EBC6A00D77163 /* ViewModel */,
-				EBB799C12A8E7C0600D77163 /* Info.plist */,
 				EB5926CB2A8DAD7900B95EC4 /* SheetRPGApp.swift */,
-				EB5926CF2A8DAD7A00B95EC4 /* Assets.xcassets */,
+				EBB799C42A8EBC8C00D77163 /* View */,
+				EBBB57FE2AA8C211005ACA28 /* DataModel */,
+				EBB799C12A8E7C0600D77163 /* Info.plist */,
 				EB5926D12A8DAD7A00B95EC4 /* Preview Content */,
 			);
 			path = SheetRPG;
@@ -92,29 +89,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EBB799C22A8EBC6A00D77163 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EB5926F52A8DADCC00B95EC4 /* SheetViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EBB799C32A8EBC7C00D77163 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EB5926F72A8DADE600B95EC4 /* Sheet.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		EBB799C42A8EBC8C00D77163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EBBA7DA72AA51557002DFBB6 /* CadastroPersonagemView.swift */,
 				EB5926CD2A8DAD7900B95EC4 /* ContentView.swift */,
-				EB5926F92A8DB36E00B95EC4 /* CadastroPersonagemView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EBBB57FE2AA8C211005ACA28 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBEC2AA72ABCF2580089BD07 /* SheetsDatabase.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5926F62A8DADCC00B95EC4 /* SheetViewModel.swift in Sources */,
+				EBEC2AA82ABCF2580089BD07 /* SheetsDatabase.swift in Sources */,
 				EB5926CE2A8DAD7900B95EC4 /* ContentView.swift in Sources */,
-				EB5926FA2A8DB36E00B95EC4 /* CadastroPersonagemView.swift in Sources */,
+				EBBA7DA82AA51557002DFBB6 /* CadastroPersonagemView.swift in Sources */,
 				EB5926CC2A8DAD7900B95EC4 /* SheetRPGApp.swift in Sources */,
-				EB5926F82A8DADE600B95EC4 /* Sheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
